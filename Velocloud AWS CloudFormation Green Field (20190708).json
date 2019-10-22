@@ -1,6 +1,5 @@
 {
  "AWSTemplateFormatVersion": "2010-09-09",
- "Mappings" : {
     "RegionMap" : {
       "us-east-2" : {"322" : "ami-0667712c0cc7ccbd6", "331" : "ami-00009cd364607db91"},
       "us-east-1" : {"322" : "ami-02d53ee6e90715a83", "331" : "ami-0a9373a4b23e149b7"},
@@ -23,6 +22,13 @@
     }
   },
  "Parameters": {
+    "SoftwareVersion": {
+      "Description": "VeloCloud Virtual Edge Software Version",
+      "Type": "String",
+      "Default": "331",
+      "AllowedValues": ["322", "331"],
+      "ConstraintDescription": "Must be one of the following: 322, or 331"
+    },
  "ResourcePrefix" : {
      "Description" : "Prefix used for naming all resources created by this template",
      "Type" : "String",
