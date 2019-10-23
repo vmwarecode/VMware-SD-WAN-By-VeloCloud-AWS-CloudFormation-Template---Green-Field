@@ -249,7 +249,7 @@
            "331"
          ]
        },
-       "InstanceType": "c4.large",
+       "InstanceType": "m5.large",
        "KeyName": {
          "Ref": "VeloCloudKeyPairName"
        },
