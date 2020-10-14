@@ -220,6 +220,13 @@
        "SubnetId": { "Ref": "PublicCidrBlock" }
      }
    },
+   "PrivateRouteTableAssociation": {
+     "Type": "AWS::EC2::SubnetRouteTableAssociation",
+     "Properties": {
+       "RouteTableId": { "Ref": "PrivateRouteTable" },
+       "SubnetId": { "Ref": "PrivateCidrBlock" }
+     }
+   },
    "PublicDefaultRoute": {
      "Type": "AWS::EC2::Route",
      "Properties": {
