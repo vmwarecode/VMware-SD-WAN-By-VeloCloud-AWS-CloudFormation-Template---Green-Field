@@ -7,6 +7,7 @@
       "us-west-1" : {"322" : "ami-056b3e0e020d5733c", "331" : "ami-0eae7918e6c5e03e3"},
       "us-west-2" : {"322" : "ami-04d3e79314781094f", "331" : "ami-0e2374b672d5149c3"},
       "ap-south-1" : {"322" : "ami-0c74ea9d8c66c1a87", "331" : "ami-08df28503c779c65b"},
+      "ap-east-1" : {"331" : "ami-08275d79"},
       "ap-northeast-2" : {"322" : "ami-0f7514d14209b90ff", "331" : "ami-001c1e312fec38b26"},
       "ap-southeast-1" : {"322" : "ami-0d0e6c10cf0ffd3a9", "331" : "ami-00b0ac7201061dce6"},
       "ap-southeast-2" : {"322" : "ami-09672eaa998504af3", "331" : "ami-0b7196fd587231352"},
