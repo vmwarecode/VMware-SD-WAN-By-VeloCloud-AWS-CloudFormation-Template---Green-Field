@@ -7,6 +7,7 @@
       "us-west-1" : {"322" : "ami-056b3e0e020d5733c", "331" : "ami-0eae7918e6c5e03e3"},
       "us-west-2" : {"322" : "ami-04d3e79314781094f", "331" : "ami-0e2374b672d5149c3"},
       "ap-south-1" : {"322" : "ami-0c74ea9d8c66c1a87", "331" : "ami-08df28503c779c65b"},
+      "ap-east-1" : {"331" : "ami-08275d79"},
       "ap-northeast-2" : {"322" : "ami-0f7514d14209b90ff", "331" : "ami-001c1e312fec38b26"},
       "ap-southeast-1" : {"322" : "ami-0d0e6c10cf0ffd3a9", "331" : "ami-00b0ac7201061dce6"},
       "ap-southeast-2" : {"322" : "ami-09672eaa998504af3", "331" : "ami-0b7196fd587231352"},
@@ -26,14 +27,14 @@
     "SoftwareVersion": {
       "Description": "VeloCloud Virtual Edge Software Version",
       "Type": "String",
-      "Default": "322",
+      "Default": "331",
       "AllowedValues": ["322", "331"],
       "ConstraintDescription": "Must be one of the following: 322, or 331"
     },
     "EC2InstanceType": {
       "Description": "Throughput and number of NICs dictate instance type",
       "Type": "String",
-      "Default": "c4.large",
+      "Default": "c5.large",
       "AllowedValues": [
         "c4.large", "c4.xlarge", "c4.2xlarge", "c4.4xlarge",
         "c5.large", "c5.xlarge", "c5.2xlarge", "c5.4xlarge"
@@ -170,6 +171,7 @@
    },
    "VeloCloudEdge": {
      "Type": "AWS::EC2::Instance",
+     "DependsOn": [ "PublicIpAddress" ],
      "Properties": {
        "ImageId": { "Fn::FindInMap" : [ "RegionMap", { "Ref" : "AWS::Region" }, { "Ref": "SoftwareVersion" }] },
        "InstanceType": { "Ref" : "EC2InstanceType" },
@@ -247,6 +249,7 @@
    },
    "ElasticIpAssociation": {
      "Type": "AWS::EC2::EIPAssociation",
+     "DependsOn": [ "PublicIpAddress", "VeloCloudEdge" ],
      "Properties": {
        "AllocationId": { "Fn::GetAtt": ["PublicIpAddress", "AllocationId"] },
        "NetworkInterfaceId": { "Ref": "VceInterfaceGe2" }
@@ -309,5 +312,5 @@
      }
    }
  },
- "Description": "VMware SD-WAN by VeloCloud CloudFormation Template (33120191025GF)"
+ "Description": "VMware SD-WAN CloudFormation Template (33120220209GF)"
 }
