@@ -13,7 +13,7 @@
       "ap-southeast-2" : {"322" : "ami-09672eaa998504af3", "331" : "ami-0b7196fd587231352", "431" : "ami-05258b9a8201bff4d"},
       "ap-northeast-1" : {"322" : "ami-05eb836595f666ab3", "331" : "ami-02028fdfda2bedef3", "431" : "ami-05f8ba84f8686021a"},
       "ca-central-1" : {"322" : "ami-0cb42e3a9a6adaf09", "331" : "ami-03a3ed427dd6af221", "431" : "ami-027a0254629bb2504"},
-      "eu-central-1" : {"322" : "ami-0d2f8031303625653", "331" : "ami-0e3ef4a959a447466", "431" : "ami-0977bf0f1ccaeb52f"},
+      "eu-central-1" : {"322" : "ami-0d2f8031303625653", "331" : "ami-0e3ef4a959a447466", "431" : "ami-01f51d344ac508479"},
       "eu-west-1" : {"322" : "ami-0967d4240a3fb5742", "331" : "ami-0f5a1ddf49df24d29", "431" : "ami-0977bf0f1ccaeb52f"},
       "eu-west-2" : {"322" : "ami-0e9836eb5505034b6", "331" : "ami-0910c04a99eda46f3", "431" : "ami-0119faf2bb52c8b98"},
       "eu-west-3" : {"322" : "ami-055c7e693f0504309", "331" : "ami-00bb1d7d48dd45aac", "431" : "ami-0371f223377a46199"},
